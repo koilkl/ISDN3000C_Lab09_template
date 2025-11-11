@@ -1,3 +1,6 @@
 ./venv/
 .DS_Store
 /FlaskApp/__pycache__
+./FlaskApp/*.pyc
+/nginx/__pycache__
+./FlaskApp/FlaskVenv/

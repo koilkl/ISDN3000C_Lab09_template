@@ -43,6 +43,7 @@ The form data would be sent to the server twice, and reload the page rapidly.
 
 **Answer:**
 
+`--host=0.0.0.0` bridges the container's network isolation, ensuring the Flask server is reachable through Docker's port mapping. The default `127.0.0.1` traps the server inside the container, making external access impossible.
 
 
 
@@ -50,6 +51,6 @@ The form data would be sent to the server twice, and reload the page rapidly.
 **Question 6:** In the `docker-compose.yml` setup, Nginx is configured to `proxy_pass http://flask-app:5000`. How does the Nginx container know the IP address of the `flask-app` container?
 
 **Answer:**
-
+Docker Compose handles network setup and DNS resolution automatically, allowing containers to communicate using their service names instead of hardcoded IP addresses.
 
 
